@@ -19,7 +19,7 @@
 
   "forwardPorts": [3000, 5432],
 
-  "postCreateCommand": "bundle install && bin/rails db:create db:migrate",
+  "postCreateCommand": ".devcontainer/post-create.sh",
 
   "remoteUser": "vscode"
 }
