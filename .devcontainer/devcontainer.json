@@ -1,0 +1,25 @@
+{
+  "name": "Ruby on Rails",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "web",
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "KoichiSasada.vscode-rdbg",
+        "anthropic.claude-code"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+
+  "forwardPorts": [3000, 5432],
+
+  "postCreateCommand": "bundle install && bin/rails db:create db:migrate",
+
+  "remoteUser": "vscode"
+}
